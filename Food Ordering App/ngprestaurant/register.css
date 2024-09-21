@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url("https://cdn.georgeinstitute.org/sites/default/files/2020-10/world-food-day-2020.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Droid Serif', serif;
+}
+
+#container {
+    background: rgba(2, 70, 51, 0.442);
+    width: 30rem;
+    height: 32rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.25rem;
+    border: 0.063rem solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;
+    height: 3rem;
+    background: rgba(5, 11, 68, 0.579);
+    font-size: 1.5rem;
+    color: #d3d3d3;
+    margin-bottom: 1.25rem;
+}
+
+fieldset {
+    border: 0;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background: rgba(235, 30, 54, 1);
+    border: 0.063rem;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    padding: 0.625rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+input {
+    background: transparent;
+    border: 0;
+    border-left: 0.25rem solid;
+    border-color: #FF0000;
+    padding: 0.625rem;
+    color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: 0;
+    background: rgba(235, 30, 54, 0.3);
+    border-radius: 1.2rem;
+    border-color: transparent;
+}
+
+::placeholder {
+    color: #d3d3d3;
+}
+
+/*Media queries */
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+    #container {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+    @media all and (min-width: 569px) and (max-width: 768px) {
+        #container {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }

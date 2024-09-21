@@ -1,0 +1,51 @@
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>| register page</title>
+  <link rel="stylesheet" href="register.css">
+  <script>
+   function showSuccessMessage(event) {
+       event.preventDefault(); // Prevent form from submitting immediately
+       var password = document.getElementById("password").value;
+       var confirmPassword = document.getElementById("confirm-password").value;
+       
+       if (password !== confirmPassword) {
+           alert("Passwords do not match. Please try again.");
+           return;
+       }
+       
+       // Here you can add an AJAX call to submit the form data to your server (register.php) if needed
+
+       // Show success message
+       alert("Registration successful, now log in.");
+       // Optionally, redirect to login page after registration success
+       window.location.href = "login.html";
+   }
+</script>
+
+</head>
+<body>
+    <div id="container">
+       <header>Register new account</header>
+       <form method="post" action="register_process.php"onsubmit="showSuccessMessage(event)">
+          <fieldset>
+             <br/>
+             <input type="text" name="username" id="username" placeholder="Username" required autofocus>
+             <br/><br/>
+             <input type="email" name="email" id="email" placeholder="E-mail" required>
+             <br/><br/>
+             <input type="tel" name="phone" id="phone" placeholder="Phone No." required>
+             <br/><br/>
+             <input type="password" name="password" id="password" placeholder="Password" required>
+             <br/><br/>
+             <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+             <br/> <br/> <br/><br/>
+             <label for="submit" ></label>
+             <input type="submit" name="submit" id="submit" value="REGISTER">
+          </fieldset>
+       </form>
+       <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+ </body>
+ </html>
